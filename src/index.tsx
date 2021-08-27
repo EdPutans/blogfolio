@@ -1,21 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import styled, { ThemeProvider } from "styled-components";
 import App from "./App";
-import themeSetup from "./theme/theme";
-
-const A = styled.div`
-  height: 20px;
-  background-color: ${({ theme }) => theme.vibrant};
-`;
+import "semantic-ui-less/semantic.less";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={themeSetup}>
-      <A />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
